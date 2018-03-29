@@ -9,6 +9,29 @@ A Gradescope compatible simple unit test framework for C++
 * In the Makefile, add `-I/usr/include/jsoncpp -std=c++11` to the compile command
 * In the Makefile, add `-ljsoncpp` to the link commands
 
+# ANOTHER WAY TO CHANGE THE MAKEFILE
+
+```diff
+diff --git a/Makefile b/Makefile
+index 948b9cc..6fd3495 100755
+--- a/Makefile
++++ b/Makefile
+@@ -1,7 +1,9 @@
+-CXX = g++
++CXX = g++ 
+ # CXX = clang++
+ 
+-CXXFLAGS = -Wall -Wno-uninitialized
++CXXFLAGS = -Wall -Wno-uninitialized -I/usr/include/jsoncpp
++
++LDFLAGS = -ljsoncpp
+ 
+ BINARIES=arrayToStringTest arrayBoundsDemo countEvensTest \
+        minOfArrayTest minOfArrayErrorTest countPrimesTest \
+169-231-169-84:PRIVATE-w18-lab04-gradescope-try pconrad$ 
+```
+
+
 # Sample `result.json`
 
 ```json
@@ -39,3 +62,5 @@ A Gradescope compatible simple unit test framework for C++
 
 
 ```
+
+
