@@ -3,6 +3,12 @@
 A Gradescope compatible simple unit test framework for C++
 
 
+# TO USE
+
+* Replace the old implementation of `tddFuncs.cpp` with the one in this repo
+* In the Makefile, add `-I/usr/include/jsoncpp -std=c++11` to the compile command
+* In the Makefile, add `-ljsoncpp` to the link commands
+
 # Sample `result.json`
 
 ```json
